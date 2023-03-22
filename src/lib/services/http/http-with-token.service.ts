@@ -3,7 +3,7 @@ import { IMap } from '../../types/global.types';
 import { IHttpClient, IHttpConfig } from '../../types/http.types';
 import { HttpService } from './http.service';
 
-export class EnhancedWithAuthHttpService implements IHttpClient {
+export class HttpServiceWithToken implements IHttpClient {
   constructor(private httpService: HttpService) {}
 
   public createQueryLink(base: string, parameters: IMap) {
