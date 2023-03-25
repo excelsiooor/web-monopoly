@@ -1,38 +1,38 @@
 export interface IHttpConfig {
-  url?: string;
-  headers?: Record<string, string>;
-  params?: any;
-  data?: any;
-  cancelToken?: any;
+  url?: string
+  headers?: Record<string, string>
+  params?: any
+  data?: any
+  cancelToken?: any
 }
 
 export interface IHttpClient {
-  get<R>(url: string, config?: IHttpConfig): Promise<R | void>;
-  post<R, D>(url: string, data: D, config?: IHttpConfig): Promise<R | void>;
-  patch<R, D>(url: string, data: D, config?: IHttpConfig): Promise<R | void>;
-  put<R, D>(url: string, data: D, config?: IHttpConfig): Promise<R | void>;
-  delete<R>(url: string, config?: IHttpConfig): Promise<R | void>;
+  get<R>(url: string, config?: IHttpConfig): Promise<R | void>
+  post<R, D>(url: string, data: D, config?: IHttpConfig): Promise<R | void>
+  patch<R, D>(url: string, data: D, config?: IHttpConfig): Promise<R | void>
+  put<R, D>(url: string, data: D, config?: IHttpConfig): Promise<R | void>
+  delete<R>(url: string, config?: IHttpConfig): Promise<R | void>
 }
 
 export interface IResponse<T = object | object[]> {
-  status: HttpStatusCode;
-  data: T;
+  status: HttpStatusCode
+  data: T
 }
 
 export interface IErrorResponse {
-  statusCode: number;
-  message: string;
+  statusCode: number
+  message: string
 }
 
 export interface IAxiosErrorResponeData {
-  reason: string;
-  error: boolean;
+  reason: string
+  error: boolean
 }
 
 export interface IAxiosErrorResponse {
-  reason: string;
-  status: number;
-  data: IAxiosErrorResponeData;
+  reason: string
+  status: number
+  data: IAxiosErrorResponeData
 }
 
 export enum HttpStatusCode {
@@ -156,5 +156,5 @@ export enum HttpStatusCode {
 
   NOT_EXTENDED = 510,
 
-  NETWORK_AUTHENTICATION_REQUIRED = 511
+  NETWORK_AUTHENTICATION_REQUIRED = 511,
 }
