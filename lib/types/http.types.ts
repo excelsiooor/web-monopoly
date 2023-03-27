@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export interface IHttpConfig {
   url?: string
   headers?: Record<string, string>
