@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 export enum StorageKeys {
-  TOKEN = 'token',
+  ACCESS_TOKEN = 'access_token',
+  REFRESH_TOKEN = 'refresh_token',
 }
 
 export enum QueryKeys {
