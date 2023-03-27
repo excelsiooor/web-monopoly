@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap');
+@import 'typography.module';
+
+html,
+body {
+  font-family: 'Heebo', sans-serif;
+  font-weight: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('/public/fonts/Heebo-Regular.ttf') format('.ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Heebo';
+  src: url('/public/fonts/Heebo-Medium.ttf') format('.ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Heebo';
+  src: url('/public/fonts/Heebo-Bold.ttf') format('.ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heebo';
+  src: url('/public/fonts/Heebo-Black.ttf') format('.ttf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
