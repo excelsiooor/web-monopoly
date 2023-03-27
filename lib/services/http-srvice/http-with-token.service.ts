@@ -38,7 +38,7 @@ export class HttpServiceWithToken implements IHttpClient {
   }
 
   private populateTokenToHeaderConfig(): object {
-    const token = localStorage.getItem(StorageKeys.TOKEN)
+    const token = localStorage.getItem(StorageKeys.ACCESS_TOKEN)
     return {
       Authorization: `Bearer ${token}`,
     }

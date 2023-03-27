@@ -21,6 +21,7 @@
     "eslint-config-airbnb-typescript": "^17.0.0",
     "framer-motion": "^10.9.1",
     "next": "^13.2.4",
+    "next-auth": "^4.20.1",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -37,7 +38,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:all": "npx eslint **/*.ts **/*.tsx **/*.js **/*.jsx --fix"
+    "lint:all": "npx eslint **/*.ts **/*.tsx **/*.js --fix"
   },
   "browserslist": {
     "production": [

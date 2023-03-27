@@ -83,6 +83,8 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'class-methods-use-this': 'off',
     'consistent-return': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    '@typescript-eslint/naming-convention': 'off',
   },
 
   overrides: [
@@ -105,7 +107,6 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-shadow': 'off',
-        'import/no-extraneous-dependencies': 'off',
         'react/jsx-props-no-spreading': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
         'jest/no-disabled-tests': 'warn',

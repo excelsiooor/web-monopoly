@@ -1,5 +1,6 @@
-import type { AppProps } from 'next/app'
+// import type { AppProps } from 'next/app'
 import React from 'react'
+import { SessionProvider } from 'next-auth/react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { ThemeProvider } from '@mui/material/styles'
@@ -19,13 +20,15 @@ const queryClient = new QueryClient({
   },
 })
 
-const AppWrapper = ({ Component, pageProps }: AppProps) => (
-  <ThemeProvider theme={muiTheme}>
-    <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
-  </ThemeProvider>
+const AppWrapper = ({ Component, pageProps, session }: any) => (
+  <SessionProvider session={session}>
+    <ThemeProvider theme={muiTheme}>
+      <QueryClientProvider client={queryClient}>
+        <Component {...pageProps} />
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </ThemeProvider>
+  </SessionProvider>
 )
 
 export default AppWrapper
