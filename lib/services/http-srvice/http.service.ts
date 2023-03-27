@@ -11,7 +11,7 @@ import {
 import axiosInstance from '../axios-service'
 
 export class HttpService implements IHttpClient {
-  constructor(private fetchingService: IHttpClient, private baseUrl = process.env.REACT_APP_BACKEND_URL) {}
+  constructor(private fetchingService: IHttpClient, private baseUrl = 'http://localhost:4000/api') {}
 
   public createQueryLink(base: string, args: IMap) {
     let url = `${base}?`

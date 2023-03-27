@@ -1,0 +1,40 @@
+@import '../../styles/typography.module.scss';
+
+.wrapper {
+  --s: 250px;   /* width size */
+  --b: 2px;     /* the border thickness*/
+  --g: 0px;    /* the gap */
+  --c: #4ecd50; /* the color */
+  --p: 5px; /* the padding */
+  --r: 15px; /* the radius*/
+
+  width: 100%;
+  max-width: var(--s);
+  padding:  var(--p);
+  border-radius: var(--r);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+  outline: calc(var(--s)/8) solid rgba(255, 255, 255, 0.8);
+  outline-offset: calc(var(--s)/-8);
+
+  transition: 0.3s;
+  & > span {
+    @extend .bold-body;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+  & > svg {
+    z-index: 1;
+  }
+
+  &:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: var(--g);
+    background-color: rgb(255, 255, 255);
+  }
+}

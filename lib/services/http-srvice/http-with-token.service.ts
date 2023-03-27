@@ -1,4 +1,4 @@
-import { STORAGE_KEYS } from '../../constants/app-keys-const'
+import { StorageKeys } from '../../constants/app-keys-const'
 import { IMap } from '../../types/global.types'
 import { IHttpClient, IHttpConfig } from '../../types/http.types'
 import { HttpService } from './http.service'
@@ -38,7 +38,7 @@ export class HttpServiceWithToken implements IHttpClient {
   }
 
   private populateTokenToHeaderConfig(): object {
-    const token = localStorage.getItem(STORAGE_KEYS.TOKEN)
+    const token = localStorage.getItem(StorageKeys.TOKEN)
     return {
       Authorization: `Bearer ${token}`,
     }
