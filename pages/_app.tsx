@@ -5,6 +5,8 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { ThemeProvider } from '@mui/material/styles'
 import { muiTheme } from '../lib/theme/mui.theme'
 
+import '../styles/main.scss'
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
