@@ -1,10 +1,11 @@
 @import '../../styles/typography.module.scss';
+@import '../../styles/variables.module.scss';
 
 .wrapper {
   --s: 250px;   /* width size */
   --b: 2px;     /* the border thickness*/
   --g: 0px;    /* the gap */
-  --c: #4ecd50; /* the color */
+  --c: $main-color; /* the color */
   --p: 5px; /* the padding */
   --r: 15px; /* the radius*/
 

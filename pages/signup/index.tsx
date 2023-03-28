@@ -1,13 +1,13 @@
 import React, { FC } from 'react'
-import { Toaster } from 'react-hot-toast'
-import { SugnUpContainer } from '../../components/sign-up-container'
+import { useSession } from 'next-auth/react'
+import { MainContainer } from '../../components/main-container'
 import { GoogleButton } from '../../components/google-button'
+import { Loader } from '../../components/loader'
 
-const SignUpPage: FC = () => (
-  <SugnUpContainer>
-    <Toaster position="top-center" reverseOrder={false} />
-    <GoogleButton />
-  </SugnUpContainer>
-)
+const SignUpPage: FC = () => {
+  const { status } = useSession()
+
+  return <MainContainer>{status === 'loading' ? <Loader /> : <GoogleButton />}</MainContainer>
+}
 
 export default SignUpPage

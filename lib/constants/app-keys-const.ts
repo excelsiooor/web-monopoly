@@ -6,4 +6,5 @@ export enum StorageKeys {
 
 export enum QueryKeys {
   LOGIN = 'LOGIN',
+  CREATE_ROOM = 'CREATE_ROOM',
 }

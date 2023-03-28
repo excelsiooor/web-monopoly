@@ -10,4 +10,9 @@ export const muiTheme = createTheme({
       xl: 2560,
     },
   },
+  palette: {
+    primary: {
+      main: '#20dc23',
+    },
+  },
 })
