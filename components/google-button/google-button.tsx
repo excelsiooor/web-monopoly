@@ -1,27 +1,21 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useLayoutEffect } from 'react'
 import cls from 'classnames'
-import { useSession, signIn } from 'next-auth/react'
+import { signIn, useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
 import { IDefaultComponentProps } from '../../lib/types/component.types'
 import styles from './google-button.module.scss'
 import GoogleIcon from '../../icons/google-icon'
-import { useGoogleLoginMutaion } from '../../lib/hooks/use-google-login'
+import { ROUTES } from '../../lib/constants/routes.const'
 
 export const GoogleButton: FC<IDefaultComponentProps> = ({ style, className }) => {
-  const [isFirstHandle, setIsFirstHandle] = useState(true)
-  const { mutate } = useGoogleLoginMutaion()
+  const { status } = useSession()
+  const router = useRouter()
 
-  const { data: session } = useSession()
-
-  useEffect(() => {
-    if (session && session.user && session.user.name && session.user.email && session.user.image && isFirstHandle) {
-      setIsFirstHandle(false)
-      mutate({
-        name: session.user?.name,
-        email: session.user?.email,
-        image: session.user?.image,
-      })
+  useLayoutEffect(() => {
+    if (status === 'authenticated') {
+      router.replace(ROUTES.HOME)
     }
-  }, [session])
+  }, [status])
 
   return (
     <div style={style} className={cls(className, styles.wrapper)} aria-hidden onClick={() => signIn()}>

@@ -1,10 +1,22 @@
 import * as React from 'react'
 import { NextPage } from 'next'
-import SignUpPage from './signup'
-// import { useRouter } from 'next/router'
-// import { ROUTES } from 'lib/constants/routes.const'
-// import { STORAGE_KEYS } from '../lib/constants/app-keys-const'
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
+import { ROUTES } from '../lib/constants/routes.const'
 
-const IndexPage: NextPage = () => <SignUpPage />
+const IndexPage: NextPage = () => {
+  const { status } = useSession({ required: true })
+  const router = useRouter()
+
+  React.useLayoutEffect(() => {
+    if (status === 'authenticated') {
+      router.replace(ROUTES.HOME)
+    } else {
+      router.replace(ROUTES.SIGN_UP)
+    }
+  }, [status])
+
+  return null
+}
 
 export default IndexPage
