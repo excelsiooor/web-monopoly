@@ -8,7 +8,7 @@ const IndexPage: NextPage = () => {
   const { status } = useSession({ required: true })
   const router = useRouter()
 
-  React.useLayoutEffect(() => {
+  React.useEffect(() => {
     if (status === 'authenticated') {
       router.replace(ROUTES.HOME)
     } else {
