@@ -12,7 +12,6 @@ class RoomsService extends HttpServiceWithToken {
 
   async getCreatedRoom() {
     const res = await this.get<ICreateRoomResponse>(RoomsEndpoints.CREATE)
-    console.log('res', res)
     return res
   }
 }

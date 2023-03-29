@@ -4,6 +4,6 @@ export enum AuthEndpoints {
 }
 
 export enum RoomsEndpoints {
-  CREATE = 'user/rooms/create',
-  GET = 'user/rooms/get',
+  CREATE = 'rooms/create',
+  GET = 'rooms/get',
 }
