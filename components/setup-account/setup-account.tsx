@@ -69,7 +69,7 @@ export const SetupAccount: FC<IComponentProps> = ({ style, className, session })
         </div>
       </section>
       {data && (
-        <Dialog open={isCreateModal} onClose={() => setIsCreateModal(false)}>
+        <Dialog open={isCreateModal} onClose={() => setIsCreateModal(false)} maxWidth={false}>
           <DialogTitle>Create Room</DialogTitle>
           <DialogContent>
             <RoomSetup id={data.id} />
