@@ -1,0 +1,8 @@
+@import '../../styles/components.module.scss';
+
+.wrapper {
+  @extend .wrapperContent;
+  width: 30%;
+  padding: 1rem;
+  flex-direction: column-reverse;
+}

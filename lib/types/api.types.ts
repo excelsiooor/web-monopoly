@@ -12,3 +12,7 @@ export interface ITokenResponse {
 export interface ICreateRoomResponse {
   id: string
 }
+
+export interface IExtendedUser extends IUser {
+  id: number
+}

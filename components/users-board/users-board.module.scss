@@ -1,0 +1,9 @@
+@import '../../styles/components.module.scss';
+@import '../../styles/typography.module.scss';
+
+.wrapper {
+  @extend .wrapperContent;
+  width: 20%;
+  padding: 1rem 0;
+  flex-direction: column;
+}
