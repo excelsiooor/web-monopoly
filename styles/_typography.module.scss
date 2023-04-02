@@ -127,6 +127,15 @@ $aeonik-font: Aeonik, -apple-system-body, sans-serif;
   letter-spacing: $spacing-sm;
 }
 
+.comments {
+  @extend .typography;
+
+  font-size: $font-size-base * 0.6;
+  line-height: 1.71;
+  font-weight: 400;
+  letter-spacing: $spacing-sm;
+}
+
 .action {
   @extend .typography;
 

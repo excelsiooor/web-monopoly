@@ -1,8 +1,30 @@
 @import '../../styles/components.module.scss';
+@import '../../styles/variables.module.scss';
 
 .wrapper {
   @extend .wrapperContent;
   width: 30%;
   padding: 1rem;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  gap: 10px;
+  .commentsWrapper {
+    width: 100%;
+    height: 84vh;
+    border-radius: 1rem;
+    background-color: rgba($white-bg, 0.6);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .commentsContent {
+      background-color: transparent;
+      border-radius: 1rem;
+      max-height: 633px;
+      width: 100%;
+      overflow-y: auto !important;
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
