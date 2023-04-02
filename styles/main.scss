@@ -17,6 +17,11 @@ body {
 	box-sizing: border-box;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 @font-face {
   font-family: 'Heebo';
   src: url('/public/fonts/Heebo-Regular.ttf') format('.ttf');

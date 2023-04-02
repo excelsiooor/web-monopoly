@@ -16,3 +16,11 @@ export interface ICreateRoomResponse {
 export interface IExtendedUser extends IUser {
   id: number
 }
+
+export interface IMessageResponse {
+  id: number
+  text: string
+  create_at: Date
+  author: IExtendedUser | null
+  room: any
+}
